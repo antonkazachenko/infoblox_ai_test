@@ -16,7 +16,7 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
 
-EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}")
+EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 HOST_LABEL_RE = re.compile(r"^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$", re.IGNORECASE)
 
 FIELDNAMES = [
@@ -257,11 +257,11 @@ def parse_owner(owner_raw) -> Tuple[str, str, str, List[str]]:
         owner = owner.replace(owner_email, "").strip()
 
     team = ""
-    team_match = re.search(r"\\(([^)]+)\\)", owner)
+    team_match = re.search(r"\(([^)]+)\)", owner)
     if team_match:
         team = team_match.group(1).strip()
         steps.append("owner_team_paren")
-        owner = re.sub(r"\\([^)]+\\)", "", owner).strip()
+        owner = re.sub(r"\([^)]+\)", "", owner).strip()
 
     owner_name = owner.strip()
     if not owner_name and owner_email:
@@ -312,7 +312,7 @@ def normalize_site(site_raw) -> Tuple[str, str, List[str]]:
 
     steps.append("site_trim")
     normalized = site.lower().replace("-", " ")
-    normalized = re.sub(r"\\s+", " ", normalized).strip()
+    normalized = re.sub(r"\s+", " ", normalized).strip()
     mapping = {
         "blr campus": "BLR CAMPUS",
         "blr": "BLR CAMPUS",
