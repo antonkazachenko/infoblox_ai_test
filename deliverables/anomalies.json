@@ -1,0 +1,111 @@
+[
+  {
+    "source_row_id": "2",
+    "issues": [
+      {
+        "field": "ip",
+        "type": "invalid",
+        "value": "10.0.1.300",
+        "detail": "'10.0.1.300' does not appear to be an IPv4 or IPv6 address"
+      }
+    ],
+    "recommended_actions": [
+      "Correct IP or mark record for review"
+    ]
+  },
+  {
+    "source_row_id": "3",
+    "issues": [
+      {
+        "field": "ip",
+        "type": "invalid",
+        "value": "10.0.1",
+        "detail": "'10.0.1' does not appear to be an IPv4 or IPv6 address"
+      }
+    ],
+    "recommended_actions": [
+      "Correct IP or mark record for review"
+    ]
+  },
+  {
+    "source_row_id": "4",
+    "issues": [
+      {
+        "field": "ip",
+        "type": "invalid",
+        "value": "10.0.1.1.2",
+        "detail": "'10.0.1.1.2' does not appear to be an IPv4 or IPv6 address"
+      }
+    ],
+    "recommended_actions": [
+      "Correct IP or mark record for review"
+    ]
+  },
+  {
+    "source_row_id": "9",
+    "issues": [
+      {
+        "field": "ip",
+        "type": "invalid",
+        "value": "abc.def.ghi.jkl",
+        "detail": "'abc.def.ghi.jkl' does not appear to be an IPv4 or IPv6 address"
+      }
+    ],
+    "recommended_actions": [
+      "Correct IP or mark record for review"
+    ]
+  },
+  {
+    "source_row_id": "10",
+    "issues": [
+      {
+        "field": "ip",
+        "type": "invalid",
+        "value": "192.168.1.-1",
+        "detail": "'192.168.1.-1' does not appear to be an IPv4 or IPv6 address"
+      }
+    ],
+    "recommended_actions": [
+      "Correct IP or mark record for review"
+    ]
+  },
+  {
+    "source_row_id": "11",
+    "issues": [
+      {
+        "field": "ip",
+        "type": "reserved_edge",
+        "value": "192.168.1.255"
+      }
+    ],
+    "recommended_actions": [
+      "Correct IP or mark record for review"
+    ]
+  },
+  {
+    "source_row_id": "12",
+    "issues": [
+      {
+        "field": "ip",
+        "type": "reserved_edge",
+        "value": "192.168.1.0"
+      }
+    ],
+    "recommended_actions": [
+      "Correct IP or mark record for review"
+    ]
+  },
+  {
+    "source_row_id": "15",
+    "issues": [
+      {
+        "field": "ip",
+        "type": "missing",
+        "value": "N/A"
+      }
+    ],
+    "recommended_actions": [
+      "Correct IP or mark record for review"
+    ]
+  }
+]
